@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais Estoque</title>
+    <link rel="stylesheet" href="../static/CSS/cadastro.css">
+</head>
+<body>
+    <!--Tela de Cadastro de usuarios-->
+
+    <h2>Usuários Cadastrados</h2>    
+
+    <div id="user">
+        <h2>Cadastro de Usuários</h2>
+        <!--inseri a mensagem sobre o cadastro do usuario-->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+            <div class="flash-message">
+                {{ messages[0] }}
+            </div>
+        {% endif %}
+        {% endwith %}
+        <!--formulario de Cadastro de usuarios-->
+        <form action="/cadastro" method="post">
+           
+            <label for="nome">Nome:</label>
+            <input type="text" name="nome" id="nome" required placeholder="Digite o nome"> <br><br>
+
+            <label for="senha">Senha:</label>
+            <input type="password" id="senha" name="senha" required placeholder="*****"> <br><br>  
+
+            <!--campo de seleção com valores obrigatorio-->
+
+            <label for="perfil">Perfil:</label>
+            <select name="perfil" id="perfil" required>
+                <option value="administrador">Administrador</option>
+                <option value="comum">Comum</option>
+            </select> <br><br> 
+           <!--Botao para retornar a pagina-->
+            <button type="submit" id="btn_insert">INCLUIR</button> <br> 
+            <a href="/usuarios" id="link-voltar">← Voltar</a>
+        </form>
+    </div>
+</body>
+</html>

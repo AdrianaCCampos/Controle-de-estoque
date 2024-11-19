@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Usuários - Mais Estoque</title>
+    <link rel="stylesheet" href="../static/CSS/acesso.css">
+</head>
+    <!--Tela apos login, ha opçoes de esolha de acesso com direcionamentos-->
+<body>
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+
+
+        </ul>
+    </nav>
+
+    <h1> MAIS ESTOQUE </h1>
+    <!--Alerta sobre a situação do estoque-->
+    <div class="label-destaque">
+        <h2>Situação Atual do Estoque:</h2>
+        {% if produtos_abaixo_minimo %}
+        <ul>
+            {% for produto in produtos_abaixo_minimo %}
+            <li>{{ produto.produto }} - Estoque Atual: {{ produto.quantidade }} => Estoque Mínimo: {{
+                produto.quantidade_minima }}</li>
+            {% endfor %}
+        </ul>
+        {% else %}
+        <p>Todos os produtos estão dentro do estoque mínimo.</p>
+        {% endif %}
+    </div>
+
+
+    <div class="acessos">
+        <!-- Caixa de Acesso ao Estoque -->
+        <div class="acesso-cx">
+            <h2>Cadastrar Produtos</h2> <br> <br>
+            <a href="/estoque">
+                <button type="button">ACESSAR</button>
+            </a>
+            <br><br>
+
+        </div>
+
+        <div class="acesso-cx">
+            <h2>Acessar Estoque</h2> <br> <br>
+            <a href="/estoqueatual">
+                <button type="submit" id="btn">ACESSAR</button>
+            </a>
+
+        </div>
+
+        <div class="acesso-cx">
+            <h2>Cadastro de Usuários</h2> <br> <br>
+            <a href="/cadastro">
+                <button type="submit" id="btn">ACESSAR</button>
+            </a>
+
+        </div>
+
+        <!-- Caixa de Cadastro de Usuários -->
+        <div class="acesso-cx">
+            <h2>Visualizar Usuários</h2> <br> <br>
+            <a href="/usuarioatual">
+                <button type="submit" id="btn">ACESSAR</button>
+            </a>
+
+        </div>
+    </div>
+</body>
+
+</html>

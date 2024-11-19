@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais Estoque</title>
+    <link rel="stylesheet" href="../static/CSS/usuarioatual.css">
+</head>
+
+<body>
+    <!--Exibe informações de usuarios-->
+    <h2>{{titulo}}</h2>
+    <div id="user">
+        <!--inseri a mensagem de alerta quando nao o perfil nao for administrador-->
+        {% with messages = get_flashed_messages() %}
+        {% if messages %}
+        <div class="flash-message">
+            {{ messages[0] }}
+        </div>
+        {% endif %}
+        {% endwith %}
+
+        <table border="1">
+            <tr>
+                <th>Nome</th>
+                <th>Senha</th>
+                <th>Perfil</th>
+            </tr>
+
+            {% for usuarios in todos_usuarios %}
+            <tr>
+                <td>{{ usuarios.nome }}</td>
+                <td>{{ usuarios.senha }}</td>
+                <td>{{ usuarios.perfil }}</td>
+
+            </tr>
+            {% endfor %}
+
+        </table>
+        <a href="/usuarios" id="link-voltar">← Voltar</a>
+    </div>
+
+</body>
+
+</html>

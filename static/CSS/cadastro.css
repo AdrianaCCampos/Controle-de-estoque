@@ -1,0 +1,81 @@
+body {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(95, 126, 167);
+    color: white;    
+    text-align: center; 
+    background: url(../CSS/img/imgt4.png) no-repeat;
+    background-size: cover; 
+}
+
+#user {      
+    margin: auto; 
+    width: 350px;
+    border-radius: 10px;
+    padding: 10px 25px 10px 20px;
+    background-color: #5b6970;
+    backdrop-filter: blur(10px);
+    opacity: .9;
+
+}
+
+#user label, #user input{
+    display: block;
+    width: 100%;
+    margin-bottom: 1px;
+
+}
+
+#user label {
+    text-align: left;
+    font-size: 12px;
+    font-weight: bold;
+    
+
+}
+
+#user input {
+    border-radius: 5px;
+}
+
+#btn_insert {
+    background-color: rgb(40, 49, 53);
+    color: white;
+    padding: 10px;
+    border: none;
+    cursor: pointer;
+    font-size: 15px;
+    border-radius: 10px;
+    font-weight: bold;
+
+}
+
+#btn_insert:hover {
+    background-color: rgb(233, 230, 225);
+    color: black;
+    font-size: 18px;
+    cursor: pointer;
+}
+
+#link-voltar {
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 14px;
+    color: #131110;
+    text-decoration: none;
+}
+
+#link-voltar:hover {
+    text-decoration: underline;
+    color: #f3f5f7;
+}
+
+.flash-message {
+    background-color: rgb(40, 49, 53);
+    color: white;
+    border: 1px solid black;
+    padding: 10px;
+    margin-top: 15px;
+    text-align: center;
+    border-radius: 5px;
+    border-radius: 10px;
+}

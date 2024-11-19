@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mais Estoque</title>
+    <link rel="stylesheet" href="../static/CSS/estoqueatual.css">
+</head>
+<body>
+    <h2>{{titulo}}</h2>
+     <!--Esta tela traz a informação atual do estoque-->
+    <table border="1">
+        <tr>
+            <th>Data</th>  <th>Produto</th>  <th>Tipo</th>  <th>Valor</th>  <th>Quantidade</th>  <th>Quantidade Miníma</th>
+        </tr>
+
+        {% for produtos in todos_produtos %}
+            <tr>
+                <td>{{ produtos.data }}</td>
+                <td>{{ produtos.produto }}</td>
+                <td>{{ produtos.tipo }}</td>
+                <td>{{ produtos.valor }}</td>
+                <td>{{ produtos.quantidade }}</td>
+                <td>{{ produtos.quantidade_minima }}</td>
+            </tr>
+        {% endfor %}
+
+    </table>
+    <a href="/usuarios" id="link-voltar">← Voltar</a>
+
+    
+</body>
+</html>

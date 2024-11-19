@@ -1,0 +1,107 @@
+html {
+    font-family: Arial, Helvetica, sans-serif;
+   }
+
+body {
+    background-color: rgb(5, 73, 117);
+    text-align: center;
+    padding-bottom: 50px;
+    background: url(../CSS/img/imgt2.png) no-repeat;
+    background-size: cover;
+}   
+
+nav ul {
+    list-style-type: none;
+    padding: 0;
+    text-align: left;
+    font-size: 20px;
+    font-weight: bold;
+}
+
+nav ul li a {
+    color: black;    
+    
+}
+
+h1 {
+    color: black;
+    text-align: center;
+    margin-top: 20px;
+ }
+
+ .label-destaque {
+    text-align: center;
+    font-size: 14px; 
+    font-weight: bold;    
+    margin: 20px;
+    padding: 60px;
+  
+}
+
+.label-destaque h2{
+    font-size: 20px;
+
+}
+
+
+.label-destaque {
+    font-size: 14px;
+    background-color: #ebe8e8;
+    border: 1px solid #1b1414;
+    border-radius: 5px;    
+    width: 30%;  
+    margin: auto; 
+    padding: 20px;
+    border-radius: 10px; 
+    box-shadow: 2px 5px 5px black;
+    text-align: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    
+}
+
+ 
+.acessos {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+    padding: 2px;
+    font-size: 12px;
+}
+
+.acesso-cx {
+    backdrop-filter: blur(10px);
+    opacity: .9;
+    background-color:  #ebe8e8;
+    border: 1px solid #1b1414; 
+    padding: 2x;
+    width: 20%; 
+    text-align: center;
+    box-sizing: border-box;
+    border-radius: 10px; 
+    box-shadow: 2px 5px 5px black;
+    
+}
+
+
+button {
+    font-size: 12px;
+    padding: 5px;
+    border-radius: 5px;    
+    margin-top: 10px;
+    background-color:  #ebe8e8;
+   
+}
+
+button:hover{
+    font-size: 15px;
+    background-color: rgb(179, 172, 172);
+    cursor: pointer;
+}
+    
+  
+      
+ 
+
+
+ 
